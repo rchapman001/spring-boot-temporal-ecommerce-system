@@ -1,0 +1,77 @@
+/* Global utility classes for legacy string className usage */
+:root{
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --danger: #dc2626;
+}
+
+.button,
+.deleteButton {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.button {
+  background: var(--primary);
+  color: white;
+}
+
+.button:hover { background: var(--primary-hover); transform: translateY(-1px); }
+.button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.deleteButton { background: var(--danger); color: white; }
+.deleteButton:hover { background: #b91c1c; transform: translateY(-1px); }
+
+.actionButtons { display:flex; gap:0.75rem; align-items:center; }
+.buttonGroup { display:flex; flex-direction:column; gap:0.75rem; }
+
+/* small helper for card-like content used occasionally as a raw class */
+.card {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 12px;
+}
+/* Global utility classes to support legacy string className usages */
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.actionButtons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+}
+
+.button,
+.deleteButton {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.button {
+  background: var(--primary);
+  color: white;
+}
+
+.button:hover { background: var(--primary-hover); transform: translateY(-1px); }
+.button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.deleteButton { background: var(--error); color: white; }
+.deleteButton:hover { background: #b91c1c; transform: translateY(-1px); }

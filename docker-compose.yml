@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+
+  ecommerce-db:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=ecommerce_db
+      - POSTGRES_USER=ecommerce_db_service_user
+      - POSTGRES_PASSWORD=ecommerce_db_service_password
+    volumes:
+      - ./db/01-permissions.sql:/docker-entrypoint-initdb.d/01-permissions.sql
+      - ./db/02-user-schema.sql:/docker-entrypoint-initdb.d/02-user-schema.sql
+      - ./db/03-product-schema.sql:/docker-entrypoint-initdb.d/03-product-schema.sql
+      - ./db/04-inventory-schema.sql:/docker-entrypoint-initdb.d/04-inventory-schema.sql
+      - ./db/05-orders-schema.sql:/docker-entrypoint-initdb.d/05-order-schema.sql
+      - ./db/06-data-setup.sql:/docker-entrypoint-initdb.d/06-data-setup.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - microservice-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@localhost.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+      - PGADMIN_LISTEN_PORT=5050
+    ports:
+      - '5050:5050'
+    networks:
+      - microservice-network
+
+networks:
+  microservice-network:
+    driver: bridge

@@ -1,0 +1,966 @@
+{
+  "info": {
+    "_postman_id": "2dab2f71-9a2a-4bb5-8f50-6ec291c6e2fe",
+    "name": "ecommerce-system",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36349510"
+  },
+  "item": [
+    {
+      "name": "user-service",
+      "item": [
+        {
+          "name": "GET /users/test",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/users/test",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "test"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /users/{id}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/users/27b9b752-bd63-424e-881b-ea9c712f5c3e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "27b9b752-bd63-424e-881b-ea9c712f5c3e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /users/email/{email}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/users/email/riley@example.com",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "email",
+                "riley@example.com"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /users",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"riley@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /users/{id}",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"riley@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/users/2d0247ea-7d72-4784-a933-eddb05c01da7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "2d0247ea-7d72-4784-a933-eddb05c01da7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /users/{id}",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/users/2d0247ea-7d72-4784-a933-eddb05c01da7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "2d0247ea-7d72-4784-a933-eddb05c01da7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "product-service",
+      "item": [
+        {
+          "name": "GET /products/test",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/products/test",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "products",
+                "test"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /products/{id}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/products/955ca3e6-76ef-484b-b1c1-c2a64a506909",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "products",
+                "955ca3e6-76ef-484b-b1c1-c2a64a506909"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /products",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Apple MacBook Pro 14\",\n  \"description\": \"14-inch MacBook Pro with M3 chip, 16GB RAM, 512GB SSD\",\n  \"price\": 1999.99\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /products/{id}",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Apple MacBook Pro 14\",\n  \"description\": \"14-inch MacBook Pro with M3 chip, 16GB RAM, 512GB SSD\",\n  \"price\": 1999.99\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/products/955ca3e6-76ef-484b-b1c1-c2a64a506909",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "products",
+                "955ca3e6-76ef-484b-b1c1-c2a64a506909"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /products/{id}",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/products/955ca3e6-76ef-484b-b1c1-c2a64a506909",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "products",
+                "955ca3e6-76ef-484b-b1c1-c2a64a506909"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "inventory-service",
+      "item": [
+        {
+          "name": "GET /inventory/test",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/inventory/test",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory",
+                "test"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /inventory",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/inventory",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /inventory/{id}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/inventory/550e8400-e29b-41d4-a716-446655440000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory",
+                "550e8400-e29b-41d4-a716-446655440000"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /inventory",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productId\": \"8631d9ee-5546-45c9-820e-cee466510bce\",\n  \"quantityAvailable\": 100,\n  \"quantityReserved\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8083/inventory",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /inventory/reserve/{productId}/{quantity}",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/inventory/reserve/550e8400-e29b-41d4-a716-446655440000/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory",
+                "reserve",
+                "550e8400-e29b-41d4-a716-446655440000",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /inventory/release/{productId}/{quantity}",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/inventory/release/550e8400-e29b-41d4-a716-446655440000/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory",
+                "release",
+                "550e8400-e29b-41d4-a716-446655440000",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /inventory/{id}",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"productId\": \"550e8400-e29b-41d4-a716-446655440000\",\n    \"quantityAvailable\": 101,\n    \"quantityReserved\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8083/inventory/550e8400-e29b-41d4-a716-446655440000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory",
+                "550e8400-e29b-41d4-a716-446655440000"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /inventory/{id}",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/inventory/550e8400-e29b-41d4-a716-446655440000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "inventory",
+                "550e8400-e29b-41d4-a716-446655440000"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "order-service",
+      "item": [
+        {
+          "name": "GET /orders/test",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/orders/test",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "orders",
+                "test"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /orders/{id}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/orders/84abd775-4aa4-4dff-b483-970a271b6a51",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "orders",
+                "84abd775-4aa4-4dff-b483-970a271b6a51"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /orders",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userId\": \"2d0247ea-7d72-4784-a933-eddb05c01da7\",\n    \"productId\": \"955ca3e6-76ef-484b-b1c1-c2a64a506909\",\n    \"quantity\": 100,\n    \"price\": 99,\n    \"status\": \"CREATED\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8084/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /orders/{id}status?status{status}",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8084/orders/03ad2398-1a94-4aeb-9435-56477dd9efe2/status?status=CREATED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "orders",
+                "03ad2398-1a94-4aeb-9435-56477dd9efe2",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "CREATED"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /orders/{id}",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/orders/84abd775-4aa4-4dff-b483-970a271b6a51",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "orders",
+                "84abd775-4aa4-4dff-b483-970a271b6a51"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "worker-service",
+      "item": [
+        {
+          "name": "GET /workflows/test",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/workflows/test",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "test"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /workflows",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/workflows",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /workflows/status/{id}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/workflows/status/TestWorkflow-3d3c6db9-d183-4492-a210-3cd76ad783d1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "status",
+                "TestWorkflow-3d3c6db9-d183-4492-a210-3cd76ad783d1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-async/TestWorkflow",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"workflowName\": \"TestWorkflow\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-async/TestWorkflow",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-async",
+                "TestWorkflow"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-async/TestWorkflow2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"workflowName\": \"TestWorkflow2\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-async/TestWorkflow2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-async",
+                "TestWorkflow2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-sync/TestWorkflow",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"workflowName\": \"TestWorkflow\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-sync/TestWorkflow",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-sync",
+                "TestWorkflow"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-sync/TestWorkflow2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"workflowName\": \"TestWorkflow2\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-sync/TestWorkflow2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-sync",
+                "TestWorkflow2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-sync/CreateProductWorkflow",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Laptop\",\n  \"description\": \"Gaming laptop\",\n  \"price\": 1200.00,\n  \"quantityAvailable\": 10,\n  \"quantityReserved\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-sync/CreateProductWorkflow",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-sync",
+                "CreateProductWorkflow"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-sync/DeleteProductWorkflow",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productId\": \"3ed6103c-7e46-4cbc-83d9-ee2b129c96b7\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-sync/DeleteProductWorkflow",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-sync",
+                "DeleteProductWorkflow"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-sync/CreateOrderWorkflow",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"riley@example.com\",\n  \"productId\": \"0decb087-54f0-4f1b-85c7-2c95ddfdd62d\",\n  \"quantity\": 1,\n  \"price\": 99\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-sync/CreateOrderWorkflow",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-sync",
+                "CreateOrderWorkflow"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /workflows/start-sync/UpdateOrderStatusWorkflow",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"orderId\": \"\",\n  \"status\": \"COMPLETED\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/workflows/start-sync/UpdateOrderStatusWorkflow",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "workflows",
+                "start-sync",
+                "UpdateOrderStatusWorkflow"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

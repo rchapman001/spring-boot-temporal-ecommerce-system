@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: order-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  profiles:
+    active: desktop # Default profile
+
+server:
+  port: 8084
+
+---
+spring:
+  config:
+    activate:
+      on-profile: desktop
+  
+  jpa: 
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  web:
+    cors:
+      allowed-origins: "http://localhost:5173"
+      allowed-methods: "*"
+      allowed-headers: "*"
+      allow-credentials: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce_db 
+    username: ecommerce_db_service_user 
+    password: ecommerce_db_service_password 
+    driver-class-name: org.postgresql.Driver 

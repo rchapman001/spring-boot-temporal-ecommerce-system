@@ -1,0 +1,49 @@
+/* moved from components/common/styles/App.module.css */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+      circle at top left,
+      rgba(99, 102, 241, 0.15),
+      transparent 40%
+    ),
+    #0f172a;
+  color: #e2e8f0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  margin: 0;
+}
+
+.link {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #4f46e5;
+}
+
+.main {
+  flex: 1;
+  padding: 3rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subtitle {
+  color: #94a3b8;
+}

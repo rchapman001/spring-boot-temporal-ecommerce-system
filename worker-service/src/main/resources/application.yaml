@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: worker-service
+
+  profiles:
+    active: desktop
+
+server:
+  port: 8085
+
+---
+spring:
+  config:
+    activate:
+      on-profile: desktop
+
+  datasource:
+    url: jdbc:h2:mem:etl_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  web:
+    cors:
+      allowed-origins: "http://localhost:5173"
+      allowed-methods: "*"
+      allowed-headers: "*"
+      allow-credentials: true
+
+  temporal:
+    connection:
+      target: localhost:7233
+    namespace: default
+    workers-auto-discovery:
+      packages:
+        - com.example.worker_service
+
+services:
+  user-service:
+    url: http://localhost:8081
+  product-service:
+    url: http://localhost:8082
+  inventory-service:
+    url: http://localhost:8083
+  order-service:
+    url: http://localhost:8084

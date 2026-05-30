@@ -1,0 +1,78 @@
+/* moved from components/common/styles/AdminPage.module.css */
+.formGroup {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+
+  background-color: #020617;
+  color: #e2e8f0;
+
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #64748b;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+.textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  margin-top: 0.5rem;
+}
+
+.checkboxLabel input {
+  accent-color: #6366f1;
+  cursor: pointer;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #334155;
+}
